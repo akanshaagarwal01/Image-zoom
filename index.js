@@ -51,8 +51,8 @@
 		showZoomedImg(event) {
 			let {left,top} = this.calcOverlayCoords(event.offsetX, event.offsetY);
 			this.showOverlay({left,top});
-			this._DOMElements.zoomedImgContainer.style.display = "block";
-			this._DOMElements.zoomedImgContainer.style.backgroundImage = `url(${this._DOMElements.origImg.src})`;
+			this._DOMElements.zoomedImgContainer.style.display = "inline-block";
+			this._DOMElements.zoomedImgContainer.style.backgroundImage = `url(images/zoomedImg.jpg)`;
 			this._DOMElements.zoomedImgContainer.style.backgroundSize = `${this._DOMElements.origImgWidth * this._zoomFactor}px ${this._DOMElements.origImgHeight * this._zoomFactor}px` ;
 			this._DOMElements.zoomedImgContainer.style.backgroundPosition = `${-(left * this._zoomFactor)}px ${-(top * this._zoomFactor)}px`
 		}

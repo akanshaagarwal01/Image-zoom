@@ -16,6 +16,5 @@
 .zoomedImgContainer {
 	display : none;
 	margin : 0px 30px;
-	float : right;
 	z-index : 10;
 }
