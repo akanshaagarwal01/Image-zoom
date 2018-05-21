@@ -1,0 +1,21 @@
+.origImgContainer {
+	display : inline-block;
+	cursor : zoom-in;
+	position: relative;
+}
+
+.zoomOverlay {
+	background-color : #ffffff;
+	opacity : 0.4;
+	position : absolute;
+	z-index : 10;
+	display : none;
+	transition : left .01s, top .01s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+}
+
+.zoomedImgContainer {
+	display : none;
+	margin : 0px 30px;
+	float : right;
+	z-index : 10;
+}
