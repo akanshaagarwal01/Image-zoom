@@ -21,7 +21,7 @@
 			zoomOverlay.style.height = this._DOMElements.origImgHeight/this._zoomFactor;
 			zoomedImgContainer.style.width = this._DOMElements.origImgWidth;
 			zoomedImgContainer.style.height = this._DOMElements.origImgHeight;
-			origImg.addEventListener("mousemove",this.showZoomedImg.bind(this));
+			origImgContainer.addEventListener("mousemove",this.showZoomedImg.bind(this));
 			origImgContainer.addEventListener("mouseleave",this.hideZoomedImg.bind(this));
 		}
 		
@@ -49,7 +49,7 @@
 		}
 		
 		showZoomedImg(event) {
-			let {left,top} = this.calcOverlayCoords(event.offsetX, event.offsetY);
+			let {left,top} = this.calcOverlayCoords(event.clientX, event.clientY);
 			this.showOverlay({left,top});
 			this._DOMElements.zoomedImgContainer.style.display = "inline-block";
 			this._DOMElements.zoomedImgContainer.style.backgroundImage = `url(images/zoomedImg.jpg)`;
